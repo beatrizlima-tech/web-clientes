@@ -1,6 +1,6 @@
 # 👥 Web Clientes
 
-![Angular](https://img.shields.io/badge/Angular-20-red?style=for-the-badge\&logo=angular)
+![Angular](https://img.shields.io/badge/Angular-21-red?style=for-the-badge\&logo=angular)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge\&logo=typescript)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?style=for-the-badge\&logo=bootstrap)
 ![REST API](https://img.shields.io/badge/REST%20API-Integration-blue?style=for-the-badge)
@@ -9,86 +9,83 @@
 
 ---
 
-## 📌 Sobre o projeto
+# 📌 Sobre o projeto
 
-O **Web Clientes** é uma aplicação frontend desenvolvida com **Angular** para gerenciamento de clientes, consumindo uma API REST criada com **Java** e **Spring Boot**.
+O **Web Clientes** é uma aplicação frontend desenvolvida com **Angular** para gerenciamento de clientes, consumindo uma API REST construída com **Java**, **Spring Boot** e **PostgreSQL**.
 
-A aplicação permite cadastrar, consultar, editar e excluir clientes por meio de uma interface web responsiva, utilizando formulários reativos, requisições HTTP e integração completa com backend.
-
----
-
-## 🚀 Funcionalidades
-
-* ✅ Cadastro de clientes
-* ✅ Consulta de clientes por nome
-* ✅ Edição de clientes
-* ✅ Exclusão de clientes
-* ✅ Integração com API REST
-* ✅ Formulários reativos
-* ✅ Consumo de endpoints com HttpClient
-* ✅ Interface com Bootstrap
-* ✅ Controle de estado com Signals
+A aplicação oferece uma interface moderna para realizar operações de cadastro, consulta, edição e exclusão de clientes, utilizando **Reactive Forms**, **Signals** e **HttpClient**, seguindo boas práticas de desenvolvimento Frontend.
 
 ---
 
-## 🧱 Tecnologias Utilizadas
+# 🚀 Funcionalidades
 
-* Angular
+* Cadastro de clientes
+* Consulta de clientes por nome
+* Atualização de clientes
+* Exclusão de clientes
+* Integração completa com API REST
+* Formulários reativos
+* Gerenciamento de estado com Signals
+* Interface responsiva utilizando Bootstrap
+
+---
+
+# 🧱 Tecnologias Utilizadas
+
+* Angular 21
 * TypeScript
-* Bootstrap
 * HTML5
 * CSS3
+* Bootstrap 5
 * Reactive Forms
 * HttpClient
-* Signals
+* Angular Signals
 * REST API
 
 ---
 
-## 🏗️ Estrutura do Projeto
+# 🏗️ Estrutura do Projeto
 
 ```text
 src/app/
 
+├── app.ts
 ├── app.html
 ├── app.css
-├── app.ts
 ├── app.config.ts
 └── app.routes.ts
 ```
 
 ---
 
-## 🔗 Integração com Backend
+# 🔗 Integração com Backend
 
-Este frontend consome a API Clientes:
+Esta aplicação consome a **API Clientes**, disponível em:
+
+➡️ https://github.com/beatrizlima-tech/api-clientes
+
+Durante o desenvolvimento, a API é executada localmente através do endereço:
 
 ```text
 http://localhost:8081/api/v1/clientes
 ```
 
-Projeto relacionado:
+---
 
-```text
-https://github.com/beatrizlima-tech/api-clientes
-```
+# 🔗 Endpoints Consumidos
+
+| Método | Endpoint                  | Descrição           |
+| ------ | ------------------------- | ------------------- |
+| POST   | `/api/v1/clientes`        | Cadastro de cliente |
+| GET    | `/api/v1/clientes/{nome}` | Consulta por nome   |
+| PUT    | `/api/v1/clientes/{id}`   | Atualização         |
+| DELETE | `/api/v1/clientes/{id}`   | Exclusão lógica     |
 
 ---
 
-## 🔗 Endpoints Consumidos
+# ⚙️ Como Executar
 
-| Método | Endpoint                  | Descrição          |
-| ------ | ------------------------- | ------------------ |
-| POST   | `/api/v1/clientes`        | Cadastrar cliente  |
-| GET    | `/api/v1/clientes/{nome}` | Consultar clientes |
-| PUT    | `/api/v1/clientes/{id}`   | Atualizar cliente  |
-| DELETE | `/api/v1/clientes/{id}`   | Excluir cliente    |
-
----
-
-## ⚙️ Como Executar o Projeto
-
-### 1. Clonar o repositório
+## 1. Clone o repositório
 
 ```bash
 git clone https://github.com/beatrizlima-tech/web-clientes.git
@@ -96,7 +93,7 @@ git clone https://github.com/beatrizlima-tech/web-clientes.git
 
 ---
 
-### 2. Instalar dependências
+## 2. Instale as dependências
 
 ```bash
 npm install
@@ -104,9 +101,9 @@ npm install
 
 ---
 
-### 3. Executar o backend
+## 3. Execute a API Clientes
 
-Antes de iniciar o frontend, execute a API Clientes:
+Certifique-se de iniciar o backend antes de executar o frontend:
 
 ```text
 https://github.com/beatrizlima-tech/api-clientes
@@ -114,7 +111,7 @@ https://github.com/beatrizlima-tech/api-clientes
 
 ---
 
-### 4. Executar o frontend
+## 4. Execute a aplicação
 
 ```bash
 ng serve
@@ -122,7 +119,7 @@ ng serve
 
 ---
 
-### 5. Acessar no navegador
+## 5. Acesse
 
 ```text
 http://localhost:4200
@@ -130,42 +127,59 @@ http://localhost:4200
 
 ---
 
-## 📊 Arquitetura
+# 📊 Arquitetura
 
 ```text
 Usuário
-   │
-   ▼
-Web Clientes (Angular)
-   │
-   ▼
+    │
+    ▼
+Angular 21
+    │
+    ▼
 HttpClient
-   │
-   ▼
+    │
+    ▼
 API Clientes (Spring Boot)
-   │
-   ▼
+    │
+    ▼
 PostgreSQL
 ```
 
 ---
 
-## 📌 Melhorias Futuras
+# 📚 Conceitos Aplicados
 
-* [ ] Adicionar validações visuais nos formulários
-* [ ] Exibir mensagens de sucesso e erro com componentes visuais
-* [ ] Criar layout mais moderno para a tabela
-* [ ] Implementar paginação
-* [ ] Implementar loading durante requisições
-* [ ] Melhorar responsividade mobile
-* [ ] Criar testes automatizados
-* [ ] Ajustar testes padrão do Angular
+* Angular Standalone Components
+* Componentização
+* CRUD
+* Reactive Forms
+* Angular Signals
+* HttpClient
+* Consumo de APIs REST
+* Comunicação Frontend e Backend
+* Responsividade com Bootstrap
+* Organização em camadas
 
 ---
 
-## 👩‍💻 Autora
+# 📌 Melhorias Futuras
 
-**Beatriz Lima de Oliveira**
+* Implementar paginação
+* Adicionar filtros avançados de pesquisa
+* Melhorar validações visuais dos formulários
+* Exibir mensagens utilizando Toasts
+* Implementar indicador de carregamento (Loading)
+* Criar testes automatizados
+* Melhorar a experiência em dispositivos móveis
 
-🔗 GitHub:
+---
+
+# 👩‍💻 Autora
+
+Desenvolvido por **Beatriz Lima**
+
+🔗 GitHub
 https://github.com/beatrizlima-tech
+
+💼 LinkedIn
+https://www.linkedin.com/in/beatrizlima-tech
